@@ -1,6 +1,6 @@
 const divElement = document.createElement('div');
 document.body.appendChild(divElement);
-let divHeight = 0;
+let divHeight = 5;
 divElement.style.height = divHeight + "px";
 divElement.style.width = "100vw";
 divElement.style.position = "fixed";
@@ -10,10 +10,6 @@ divElement.style.backgroundColor = "green";
 document.body.style.height = "10000px";
 
 let grow = true;
-
-function go() {
-    console.log("go");
-}
 
 function changeHeight() {
     console.log("scroll")
@@ -26,13 +22,12 @@ function changeHeight() {
     if (grow) {
         divHeight += 5;
         divElement.style.backgroundColor = "green";
-        divElement.style.height = divHeight + "px";
     } else {
         divHeight -= 5;
         divElement.style.backgroundColor = "red";
-        divElement.style.height = divHeight + "px";
     }
+
+    divElement.style.height = divHeight + "px";
 }
 
-// window.addEventListener("scroll", go);
 window.addEventListener("scroll", changeHeight);
