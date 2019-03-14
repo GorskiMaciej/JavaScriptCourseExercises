@@ -6,19 +6,27 @@ const changeColor = (e) => {
 
   // using if
   // if (e.keyCode == 38) {
-  //   rgbValue += 3;
+  //   if (rgbValue <= 255) {
+  //     rgbValue += 3;
+  //   }
   // } else if (e.keyCode == 40) {
-  //   rgbValue -= 3;
+  //   if (rgbValue >= 0) {
+  //     rgbValue -= 3;s
+  //   }
   // }
 
   //using swtich
   const selectedKey = e.keyCode;
   switch (selectedKey) {
     case 38:
-      rgbValue += 3;
+      if (rgbValue <= 255) {
+        rgbValue += 3;
+      }
       break;
     case 40:
-      rgbValue -= 3;
+      if (rgbValue >= 0) {
+        rgbValue -= 3;
+      }
       break;
   }
   document.body.style.backgroundColor = `rgb(${rgbValue}, ${rgbValue}, ${rgbValue})`;
