@@ -9,7 +9,10 @@ const addingAdviceToArray = (e) => {
     e.preventDefault();
     const textInput = document.querySelector('input');
     const advice = textInput.value;
-    advices.push(advice);
+    if (advice) {
+        advices.push(advice);
+    }
+    console.log(advices);
 }
 
 const resetAdvices = (e) => {
