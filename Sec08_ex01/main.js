@@ -12,6 +12,7 @@ const addingAdviceToArray = (e) => {
     if (advice) {
         advices.push(advice);
     }
+    textInput.value = "";
     console.log(advices);
 }
 
