@@ -10,7 +10,7 @@ const txt = ['tekst1', 'tekst2', 'tekst3']
 
 // Implementacja
 const addLetter = () => {
- // Użyj w środku setTimeout
+    setTimeout
 }
 
 
@@ -19,6 +19,6 @@ addLetter(); //pierwsze wywołanie
 
 // Animacja kursora (zostaw bez zmian)
 const cursorAnimation = () => {
- spnCursor.classList.toggle('active');
+    spnCursor.classList.toggle('active');
 }
 setInterval(cursorAnimation, 400);
