@@ -8,13 +8,34 @@ const spnText = document.querySelector('.text');
 const spnCursor = document.querySelector('.cursor');
 const txt = ['tekst1', 'tekst2', 'tekst3']
 
+let activeWord = 0;
+let activeLetter = -10;
+
 // Implementacja
 const addLetter = () => {
-    setTimeout
+    if (activeLetter >= 0) {
+        spnText.textContent += txt[activeWord][activeLetter];
+    }
+    activeLetter++;
+    if (activeLetter === txt[activeWord].length) {
+        activeWord++;
+        if (activeWord === txt.length) return;
+
+        return setTimeout(() => {
+            activeLetter = -10;
+            spnText.textContent = '';
+            addLetter();
+        }, 2000);
+
+    }
+
+    setTimeout(addLetter, 100);
 }
 
 
+
 addLetter(); //pierwsze wywołanie
+
 
 
 // Animacja kursora (zostaw bez zmian)
