@@ -17,7 +17,6 @@ const resetTime = () => {
 
 const stoper = () => {
     if (!activeTime) {
-        startPauseBtn.classList.add('active');
         startPauseBtn.textContent = "Pauza"
         indexOfInterval = setInterval(() => {
             time++;
