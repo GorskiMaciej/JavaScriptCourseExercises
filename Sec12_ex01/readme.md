@@ -1,1 +1,0 @@
-Make counter showing time spent on site.
