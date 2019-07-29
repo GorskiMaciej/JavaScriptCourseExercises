@@ -1,0 +1,13 @@
+button {
+    margin: 50px 50px;
+    padding: 30px;
+    color: #fff;
+    background-color: green;
+    border: none;
+    font-size: 20px;
+}
+
+li.big {
+    font-size: 30px;
+    color: blueviolet
+}
