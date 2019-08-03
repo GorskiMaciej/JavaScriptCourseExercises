@@ -1,19 +1,26 @@
 const body = document.body;
 
-const changeColorAndSHowCoordinates = (e) => {
+const getColor = (e) => {
     const x = e.clientX;
     const y = e.clientY;
-    const backgroundColor = "";
 
-    console.log(`${x},${y}`);
     if (!(x % 2) && !(y % 2)) {
-        body.style.backgroundColor = "red";
+        return "red";
     } else if ((x % 2) && (y % 2)) {
-        body.style.backgroundColor = "blue";
+        return "blue";
     } else {
-        body.style.backgroundColor = "green";
+        return "green";
     }
 }
 
-body.addEventListener('click',
-    changeColorAndSHowCoordinates)
+const showCoordinates = (e) => {
+    const x = e.clientX;
+    const y = e.clientY;
+    console.log(`${x},${y}`);
+};
+
+body.addEventListener('click', (event) => {
+    showCoordinates(event);
+    const color = getColor(event);
+    body.style.backgroundColor = color;
+})
