@@ -1,15 +1,19 @@
 const input = document.getElementById('pass');
-const password = "user";
-const message = "Wiadomość po wpisanu hasła."
+const passwords = ["user", "lato"];
+const messages = ["Wiadomość po wpisanu hasła.", "gorąca pora roku"];
 const div = document.querySelector('.message');
 
 input.addEventListener('input', (e) => {
-    if (password === e.target.value) {
-        div.textContent = message;
-        e.target.value = "";
-    } else {
-        div.textContent = "";
-    }
+    div.textContent = "";
+    const inputText = e.target.value;
+
+
+    passwords.forEach((password, index) => {
+        if (password === inputText) {
+            div.textContent = messages[index];
+            e.target.value = "";
+        }
+    })
 })
 
 input.addEventListener('focus', () => {
