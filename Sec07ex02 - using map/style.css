@@ -1,0 +1,17 @@
+body {
+    margin: 5vh;
+    text-align: center;
+    font-family: arial;
+}
+
+label,
+input {
+    font-size: 30px;
+    margin: 10px;
+}
+
+div {
+    border: 3px solid #444;
+    font-size: 40px;
+    margin: 20px;
+}
