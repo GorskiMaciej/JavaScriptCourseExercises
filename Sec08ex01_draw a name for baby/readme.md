@@ -1,0 +1,1 @@
+program generating name for child from list

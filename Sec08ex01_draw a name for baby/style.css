@@ -1,0 +1,19 @@
+body {
+    margin: 5vh;
+    text-align: center;
+}
+
+button {
+    padding: 15px;
+    font-size: 30px;
+    border: 3px solid rgb(0, 204, 143);
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #555;
+}
+
+div {
+    margin: 40px;
+    font-family: arial;
+    font-size: 40px;
+}
