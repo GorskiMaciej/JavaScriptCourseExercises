@@ -24,9 +24,7 @@ const playerChoice = (e) => {
 };
 
 const aIdraw = () => {
-    const index = Math.floor(Math.random() * gesturesContainer.length);
-    const choice = gesturesContainer[index].dataset.option;
-    return choice;
+    return gesturesContainer[Math.floor(Math.random() * gesturesContainer.length)].dataset.option;
 };
 
 const checkResult = (player, ai) => {
@@ -74,12 +72,13 @@ const publishResults = (player, ai, result) => {
 const resetGameResults = () => {
     gameResults.playerChoice = "";
     gameResults.aIChoice = "";
-}
-
-const startGame = () => {
     gesturesContainer.forEach((element) => {
         element.style.boxShadow = "0 0 0 white";
     });
+}
+
+const startGame = () => {
+
     if (!gameResults.playerChoice) {
         return alert("Proszę wybrać gest!");
     }
@@ -92,8 +91,6 @@ const startGame = () => {
 };
 
 
-gesturesContainer.forEach((element) => {
-    element.addEventListener("click", playerChoice);
-});
+gesturesContainer.forEach(element => element.addEventListener("click", playerChoice));
 
 starGameBtn.addEventListener("click", startGame);
