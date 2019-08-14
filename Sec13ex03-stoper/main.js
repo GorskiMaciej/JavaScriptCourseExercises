@@ -8,6 +8,7 @@ let indexOfInterval = 0;
 let startFlag = false;
 
 const start = () => {
+    starBtn.textContent = "Pause"
     if (!startFlag) {
         indexOfInterval = setInterval(() => {
             time += 1;
@@ -18,17 +19,21 @@ const start = () => {
             timeDisplay.textContent = `${seconds}.${hundreths}s`;
         }, 10)
         startFlag = !startFlag;
+    } else {
+        clearInterval(indexOfInterval);
+        starBtn.textContent = "Start"
+        startFlag = !startFlag;
     }
 
 }
 const reset = () => {
-    if (startFlag) {
-        clearInterval(indexOfInterval);
-        seconds = 0;
-        hundreths = 0;
-        timeDisplay.textContent = "---";
-    }
-    startFlag = !startFlag;
+    clearInterval(indexOfInterval);
+    time = 0;
+    seconds = 0;
+    hundreths = 0;
+    timeDisplay.textContent = "---";
+    starBtn.textContent = "Start"
+    startFlag = false;
 }
 
 starBtn.addEventListener('click', start);
