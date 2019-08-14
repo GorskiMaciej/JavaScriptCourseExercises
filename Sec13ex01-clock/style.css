@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+}
+
+.clock {
+    margin: 50px auto;
+    font-size: 40px;
+    font-family: arial;
+}
+
+span {
+    color: crimson;
+}
